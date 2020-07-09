@@ -12,6 +12,12 @@ class MovieList extends Component {
         this.fetchMovies();
     }
 
+    componentDidUpdate = (prevProps) => {
+        if(this.props.location !==  this.prevProps) {
+            this.fetchMovies();
+        }
+    }
+
     fetchMovies = () => {
         let q = queryString.parse(this.props.location.search);
         Axios.get(`{cannot provide the API Key}`) 

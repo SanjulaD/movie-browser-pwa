@@ -1,17 +1,32 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { withRouter , Link } from 'react-router-dom';
 
 class Header extends Component {
-    state = {  }
+    
+    submitHandler = (event) => {
+        event.preventDefault();
+        let { history } = this.props;
+        history.push('/movies?searchText='+this.refs.searchTf.value);
+        console.log('this is:',this)
+    }
+
     render() {
-        return (    
+        return (
             <div className="alert alert-info">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8">
-                            <h3>Movie Browser</h3>
+                            <Link to='/' style={{ textDecoration: 'none' }}><h3>Movie Browser</h3></Link>
                         </div>
                         <div className="col-md-4">
-                            <input type="search" name="" id="" className="form-control" placeholder="Search Movie"/>
+                            <form onSubmit={this.submitHandler}>
+                                <input
+                                    ref="searchTf"
+                                    type="search"
+                                    className="form-control"
+                                    placeholder="Search Movie"
+                                />
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -20,4 +35,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default withRouter(Header);
