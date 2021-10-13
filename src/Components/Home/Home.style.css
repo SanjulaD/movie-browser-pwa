@@ -2,3 +2,8 @@
 .movieHeader{
     padding: 10px 0px 0px 0px;
 }
+
+.movie-class {
+    background-color: black;
+    padding: 10px;
+}

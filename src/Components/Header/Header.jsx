@@ -7,7 +7,6 @@ class Header extends Component {
         event.preventDefault();
         let { history } = this.props;
         history.push('/movies?searchText='+this.refs.searchTf.value);
-        console.log('this is:',this)
     }
 
     render() {
@@ -15,22 +14,16 @@ class Header extends Component {
             <div className="alert alert-warning">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-3">
+                        <div className="col-md-8">
                             <Link to='/' style={{ textDecoration: 'none' }}><h3>Movie Browser</h3></Link>
                         </div>
-                        <div className="col-md-3">
-                            <Link to='/' style={{ textDecoration: 'none' }}><h3>Home</h3></Link>
-                        </div>
-                        <div className="col-md-3">
-                            <Link to='/' style={{ textDecoration: 'none' }}><h3>Browse Here</h3></Link>
-                        </div>
-                        <div className="col-md-3">
+                        <div className="col-md-4">
                             <form onSubmit={this.submitHandler}>
                                 <input
                                     ref="searchTf"
                                     type="search"
                                     className="form-control"
-                                    placeholder="Search Movie"
+                                    placeholder="Search Movie here"
                                 />
                             </form>
                         </div>
