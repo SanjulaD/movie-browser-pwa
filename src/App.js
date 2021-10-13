@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import MovieList from './Components/Movie/MovieList/MovieList';
@@ -6,9 +6,7 @@ import MovieList from './Components/Movie/MovieList/MovieList';
 import { BrowserRouter, Route } from 'react-router-dom';
 import MovieDetails from './Components/Movie/MovieDetails/MovieDetails';
 
-class App extends Component {
-
-  render() {
+const App = () => {
     return (
       <BrowserRouter>
         <div className="App">
@@ -21,7 +19,6 @@ class App extends Component {
         </div>
       </BrowserRouter>
     );
-  }
 }
 
 export default App;
