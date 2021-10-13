@@ -12,13 +12,19 @@ class Header extends Component {
 
     render() {
         return (
-            <div className="alert alert-info">
+            <div className="alert alert-warning">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-8">
+                        <div className="col-md-3">
                             <Link to='/' style={{ textDecoration: 'none' }}><h3>Movie Browser</h3></Link>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-3">
+                            <Link to='/' style={{ textDecoration: 'none' }}><h3>Home</h3></Link>
+                        </div>
+                        <div className="col-md-3">
+                            <Link to='/' style={{ textDecoration: 'none' }}><h3>Browse Here</h3></Link>
+                        </div>
+                        <div className="col-md-3">
                             <form onSubmit={this.submitHandler}>
                                 <input
                                     ref="searchTf"
