@@ -29,7 +29,7 @@ class MovieDetails extends React.Component {
         return (
             <div className="row">
                 <div className="col-md-4">
-                    <img src={movies.Poster} alt={movies.Title} />
+                    <img src={movies?.Poster} alt={movies.Title} />
                 </div>
                 <div className="col-md-8">
                     <h1 style={{ fontSize: "28px" }}>{movies.Title}</h1>
@@ -38,15 +38,15 @@ class MovieDetails extends React.Component {
                         <tbody>
                             <tr>
                                 <th scope="row">Director</th>
-                                <td>{movies.Director}</td>
+                                <td>{movies?.Director}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Plot</th>
-                                <td>{movies.Plot}</td>
+                                <td>{movies?.Plot}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Year</th>
-                                <td>{movies.Year}</td>
+                                <td>{movies?.Year}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Language</th>
