@@ -10,9 +10,9 @@ const MovieCard = ({ movie, history }) => {
         <div className="card" onClick={() => getMovieDetails(movie.imdbID)}>
             <div className="card-body">
                 <h5 className="card-title">{movie.Title}</h5>
-                <p className="card-text">{movie.Year}</p>
+                <p className="card-text">{movie?.Year}</p>
             </div>
-            <img src={movie.Poster} alt={movie.Title} className="card-img-top" />
+            <img src={movie?.Poster} alt={movie.Title} className="card-img-top" />
         </div>
     </div>
 
