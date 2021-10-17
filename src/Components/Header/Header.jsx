@@ -11,7 +11,7 @@ class Header extends Component {
 
     render() {
         return (
-            <div className="alert alert-warning">
+            <div className="alert alert-primary">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8">
