@@ -32,25 +32,25 @@ class MovieDetails extends React.Component {
                     <img src={movies?.Poster} alt={movies.Title} />
                 </div>
                 <div className="col-md-8">
-                    <h1 style={{ fontSize: "28px" }}>{movies.Title}</h1>
+                    <h1 style={{ fontSize: "32px", fontWeight: "bold" }}>{movies.Title}</h1>
                     <br />
-                    <Table>
+                    <Table className="table-striped active">
                         <tbody>
                             <tr>
                                 <th scope="row">Director</th>
-                                <td>{movies?.Director}</td>
+                                <td style={{fontWeight: "bold" }}>{movies?.Director}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Plot</th>
-                                <td>{movies?.Plot}</td>
+                                <td style={{fontWeight: "bold" }}>{movies?.Plot}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Year</th>
-                                <td>{movies?.Year}</td>
+                                <td style={{fontWeight: "bold" }}>{movies?.Year}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Language</th>
-                                <td>{movies.Language}</td>
+                                <td style={{fontWeight: "bold" }}>{movies.Language}</td>
                             </tr>
                             <tr>
                                 <th scope="row">Writer</th>
